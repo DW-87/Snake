@@ -1,10 +1,63 @@
 <html>
-    <title>
-        Snake Game
-    </title>
-    <body>
-        <canvas id="canvas" width="250px" height="250px"></canvas>
+<title>
+    Snake Game
+</title>
+<link href="https://fonts.googleapis.com/css?family=Sniglet&display=swap" rel="stylesheet">
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
 
-        <script src="snake.js"></script>
-    </body>
+    #canvas {
+        background-color: #8BAC0F;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    #snakeGroup {
+        text-align: center;
+    }
+
+    #snakeTitle {
+        font-family: 'Sniglet', cursive;
+        font-size: 80px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    #snakePara {
+        font-family: 'Sniglet', cursive;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    #gameover {
+        font-family: 'Sniglet', cursive;
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    #footerText {
+        font-family: 'Sniglet', cursive;
+        font-size: 35px;
+        margin-top: 25px;
+    }
+</style>
+
+<body>
+    <div id="snakeGroup">
+        <h1 id="snakeTitle">Snake 🐍</h1>
+        <p id="snakePara">Press the arrow keys ⬅️⬆️⬇️➡️ to move the snake.<br> Eat the food to score points. If the
+            snake touches the walls
+            or itself, its game over.<br> The game will automatically restart after 3 seconds. Happy Gaming!</p>
+        <h2 id="gameover">Score: <span id="gameScore"></span></h2>
+        <canvas id="canvas" width="500px" height="500px"></canvas>
+        <h3 id="footerText">Made with ❤️ by David Winters</h3>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+
 </html>
